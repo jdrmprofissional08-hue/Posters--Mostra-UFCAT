@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademIA: Seu personal trainer virtual - Pôster Acadêmico</title>
+    <style>
+        :root {
+            --primary-color: #005A5B; /* Tom verde/azulado institucional */
+            --secondary-color: #e0f2f1;
+            --text-color: #2c3e50;
+            --bg-color: #eaeff2;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .poster-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 12px;
+        }
+        header {
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+        }
+        .institution-info h3, .institution-info h4 {
+            margin: 5px 0;
+            color: #555;
+            font-weight: 500;
+        }
+        .institution-info h2 {
+            margin: 10px 0;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+        .title {
+            font-size: 2.8em;
+            color: var(--primary-color);
+            margin: 25px 0 10px 0;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+        .authors-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+        .authors, .advisor {
+            flex: 1;
+            min-width: 300px;
+            margin: 10px;
+            text-align: left;
+        }
+        .authors p, .advisor p {
+            margin: 0 0 10px 0;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+        .authors span, .advisor span {
+            display: block;
+            margin-bottom: 4px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        @media (max-width: 850px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        section {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            height: fit-content;
+        }
+        h2.section-title {
+            color: #fff;
+            background-color: var(--primary-color);
+            padding: 12px 20px;
+            margin: -25px -25px 20px -25px;
+            border-radius: 10px 10px 0 0;
+            font-size: 1.25em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+        .figure-placeholder {
+            background: #f1f3f4;
+            border: 2px dashed #b0bec5;
+            padding: 30px 20px;
+            text-align: center;
+            color: #546e7a;
+            font-style: italic;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        .footer-info {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster-container">
+        <header>
+            <div class="institution-info">
+                <h2>UNIVERSIDADE FEDERAL DE CATALÃO - UFCAT</h2>
+                <h3>Instituto de Matemática e Tecnologia - IMTec</h3>
+                <h4>Bacharelado em Inteligência Artificial 1° Período</h4>
+            </div>
+            
+            <h1 class="title">AcademIA: Seu personal trainer virtual</h1>
+            <div class="subtitle">MOSTRA UFCAT 2026</div>
+
+            <div class="authors-section">
+                <div class="authors">
+                    <p>Autores:</p>
+                    <span>Ana Luiza Caldeira Gomes (202600410)</span>
+                    <span>Emanuel Moretti Costa (202600416)</span>
+                    <span>Geovana Novais Santos (202601019)</span>
+                    <span>Manillya Gabriella Rocha Adomo (202600422)</span>
+                </div>
+                <div class="advisor">
+                    <p>Orientador(a):</p>
+                    <span>Prof. Dr. Marcio de Souza Dias</span>
+                    <span>IMTec/UFCAT</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid-container">
+            <div class="column-left">
+                <section>
+                    <h2 class="section-title">1. INTRODUÇÃO/CONTEXTO</h2>
+                    <p>A prática regular de exercícios físicos é essencial para a saúde e a qualidade de vida, porém muitas pessoas encontram dificuldades para manter uma rotina de treinos. A falta de orientação personalizada, de tempo para buscar informações confiáveis e de acompanhamento da evolução pode tornar esse processo desmotivador, especialmente para iniciantes. Nesse contexto, a tecnologia pode atuar como uma ferramenta de apoio acessível e prática.</p>
+                    <p>O projeto AcademIA foi desenvolvido como uma aplicação web de personal trainer virtual com inteligência artificial. Seu objetivo é auxiliar usuários na organização de treinos de acordo com informações do perfil, como objetivos, experiência e local disponível para a prática, seja em casa ou na academia. A plataforma oferece um chatbot para interação e orientação, planos de exercícios com séries, repetições e vídeos demonstrativos, além de recursos para registrar treinos concluídos, avaliar a experiência e acompanhar estatísticas de progresso.</p>
+                    <p>O problema abordado é a dificuldade de encontrar um acompanhamento de treino simples, personalizado e centralizado em um único ambiente. Como base, o projeto utiliza conceitos de desenvolvimento web com Python e Flask, persistência de dados em arquivos JSON, integração com modelo de linguagem e visualização de dados por gráficos. Assim, a AcademIA busca tornar a prática de exercícios mais organizada, motivadora e adaptada às necessidades de cada usuário.</p>
+                </section>
+
+                <section>
+                    <h2 class="section-title">2. OBJETIVOS</h2>
+                    <p><strong>Objetivo geral:</strong> Desenvolver uma aplicação web com inteligência artificial para auxiliar usuários na criação, execução e no acompanhamento de rotinas de exercícios físicos personalizadas.</p>
+                    <p><strong>Objetivo específico 1:</strong> Coletar e armazenar informações do perfil do usuário, como idade, peso, altura, objetivo, local de treino, frequência semanal e possíveis limitações físicas.</p>
+                    <p><strong>Objetivo específico 2:</strong> Utilizar um chatbot integrado a um modelo de inteligência artificial para oferecer orientações e gerar planos de treino adequados à prática em casa ou na academia.</p>
+                    <p><strong>Objetivo específico 3:</strong> Disponibilizar exercícios com séries, repetições e vídeos demonstrativos, permitindo registrar treinos concluídos e acompanhar a evolução por meio de estatísticas e gráficos.</p>
+                </section>
+
+                <section>
+                    <h2 class="section-title">3. METODOLOGIA</h2>
+                    <p>O trabalho foi desenvolvido por meio de uma pesquisa aplicada, com abordagem qualitativa e caráter exploratório, pois buscou criar uma solução prática para apoiar pessoas na organização de seus treinos. Inicialmente, foram identificadas necessidades comuns dos usuários, como dificuldade em encontrar exercícios adequados, manter a regularidade e acompanhar a própria evolução.</p>
+                    <p>A aplicação AcademIA foi implementada utilizando a linguagem Python e o framework Flask, responsável pelas rotas, regras de negócio e comunicação entre a interface e o servidor. A interface web foi construída com HTML, CSS e JavaScript, enquanto a biblioteca Chart.js foi utilizada para a criação dos gráficos de progresso. Os dados de perfil, histórico de conversas, planos de treino e avaliações são armazenados em arquivos JSON.</p>
+                    <p>Para a interação inteligente, foi integrada a API da OpenAI com o modelo GPT-4o mini. O chatbot utiliza dados do perfil e uma base de exercícios para sugerir treinos personalizados para casa ou academia.</p>
+                    <p>Por fim, foram realizados testes manuais das principais funções, incluindo login, envio de mensagens, registro de treinos, salvamento de perfil e exibição das estatísticas.</p>
+                    <div class="figure-placeholder">
+                        [Diagrama do Sistema: 1. Login e perfil -> 2. Contexto -> 3. IA generativa -> 4. Pós processamento -> 5. Banco de dados -> 6. Estatísticas]
+                    </div>
+                </section>
+            </div>
+
+            <div class="column-right">
+                <section>
+                    <h2 class="section-title">4. REFERENCIAL TEÓRICO</h2>
+                    <p>A inteligência artificial generativa permite que sistemas compreendam linguagem natural e gerem respostas contextualizadas. No AcademIA, isso torna a interação mais acessível, auxiliando na coleta de dados e na sugestão de treinos. Segundo Brown et al. (2020), modelos de linguagem executam tarefas complexas a partir de instruções e exemplos contextuais. A personalização é essencial em sistemas de saúde, adaptando informações aos objetivos individuais, e Deterding et al. (2011) destacam que a gamificação, como níveis e monitoramento de progresso, potencializa o engajamento. Assim, a AcademIA une IA, personalização e dados para um treino mais organizado e motivador.</p>
+                    <p><strong>Referências:</strong></p>
+                    <ul>
+                        <li>BROWN, T. B. et al. Language models are few-shot learners. In: NeurIPS, v. 33, p. 1877-1901, 2020.</li>
+                        <li>DETERDING, S. et al. From game design elements to gamefulness: defining "gamification". In: Mind Trek 11, p. 9-15, 2011.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="section-title">5. RESULTADOS E DISCUSSÃO</h2>
+                    <p>A validação técnica do AcademIA foi estruturada em três blocos de teste, conforme ilustrado no gráfico. Os testes funcionais e os testes de IA em cenário ideal atingiram 100% de aprovação, com o modelo seguindo corretamente a ordem de coleta de perfil definida no prompt, o que foi um resultado esperado, dado o controle rigoroso das condições de teste. Já os cenários adversariais, mais próximos do uso real, revelaram uma taxa de sucesso mais realista de 50%, chegando a 65% considerando acertos parciais, como mostra o gráfico, na qual 30% dos casos foram classificados como "Parcial" e 20% como "Falhou". O achado mais relevante, e também o mais surpreendente, foi a geração de um treino com agachamento livre para um perfil com contraindicação explícita de flexão de joelho.</p>
+                    <p>Esse resultado, no entanto, está alinhado à literatura: modelos de linguagem tendem a usar linguagem de segurança genérica sem evitar, na prática, recomendações clinicamente inadequadas em casos específicos, como relatado por Zaleski et al. (2024). Estudos semelhantes sobre chatbots de saúde e exercício também apontam esse padrão, reforçando que a queda de desempenho em cenários adversariais não é uma limitação exclusiva do AcademIA, mas uma característica recorrente de sistemas baseados em modelos de linguagem generativos.</p>
+                    <p>Esse padrão evidencia a necessidade de barreiras de validação (guardrails) independentes do modelo, e não apenas instruções em prompt. Em síntese, o AcademIA apresenta desempenho sólido em tarefas estruturadas e de baixo risco, mas ainda demonstra limitações relevantes em cenários que exigem julgamento clínico ou de segurança, resultado consistente com achados recentes sobre chatbots de saúde e bem-estar.</p>
+                    <div class="figure-placeholder">
+                        [Gráfico de Barras: Taxa de sucesso por bloco de teste do AcademIA]<br>
+                        Testes Funcionais: 100% Sucesso | Testes com IA (cenário ideal): 100% Sucesso | Testes com IA (cenários adversariais): 50% Passou, 30% Parcial, 20% Falhou.
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">6. CONCLUSÕES</h2>
+                    <p>Os objetivos foram atingidos, consolidando o AcademIA como uma solução eficaz que utiliza o modelo GPT-4o mini para gerar treinos personalizados, permitindo interação fluida e acompanhamento de progresso via interface web.</p>
+                    <p>Como limitações, destaca-se o uso de arquivos JSON para a persistência de dados, o que, embora funcional para o protótipo, limita a escalabilidade e a concorrência em comparação a um sistema de gerenciamento de banco de dados relacional. Além disso, a aplicação ainda carece de uma camada de autenticação de usuários e de testes automatizados mais robustos.</p>
+                    <p>Futuramente, pretende-se migrar para bancos relacionais (PostgreSQL), implementar autenticação e integrar dispositivos wearables para enriquecer a personalização com dados biométricos. Este trabalho contribui para a área de IA ao demonstrar que modelos de linguagem democratizam o suporte à prática de exercícios físicos, fomentando o uso de tecnologias inteligentes para a promoção de hábitos saudáveis.</p>
+                </section>
+                
+                <section>
+                    <h2 class="section-title">7. REFERÊNCIAS BIBLIOGRÁFICAS</h2>
+                    <p>Universidade Federal de Catalão UFCAT<br>
+                    Instituto de Matemática e Tecnologia - IMTec</p>
+                </section>
+            </div>
+        </div>
+        
+        <div class="footer-info">
+            Inteligência Artificial • Mostra UFCAT 2026 • Instituto de Matemática e Tecnologia
+        </div>
+    </div>
+</body>
+</html>
