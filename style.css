@@ -709,6 +709,102 @@ img {
     gap: 16px;
 }
 
+/* Controles de Navegação de Slides */
+.viewer-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
+    margin-bottom: 12px;
+}
+
+.viewer-section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.slide-indicator {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+}
+
+.slide-frame {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b1120;
+}
+
+.slide-frame img {
+    max-height: calc(100vh - 240px);
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.slide-nav-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
+    gap: 16px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.slide-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 6px 4px;
+}
+
+.slide-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #475569;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: none;
+    padding: 0;
+}
+
+.slide-dot:hover {
+    background-color: #94a3b8;
+}
+
+.slide-dot.active {
+    background-color: var(--ufcat-orange);
+    transform: scale(1.3);
+}
+
+.pdf-page-card {
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.pdf-page-card:hover {
+    border-color: var(--ufcat-teal);
+    transform: translateY(-2px);
+}
+
+.pdf-page-card.active-card {
+    border-color: var(--ufcat-orange);
+    box-shadow: 0 0 0 2px var(--ufcat-orange);
+}
+
 /* Responsividade Institucional */
 @media (max-width: 860px) {
     .columns-grid {
@@ -754,4 +850,13 @@ img {
     .pdf-embed-wrapper {
         height: 420px;
     }
+    .slide-nav-controls {
+        justify-content: center;
+    }
+    .slide-dots {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
 }
+
