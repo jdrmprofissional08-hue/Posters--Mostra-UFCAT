@@ -1,0 +1,757 @@
+/* ============================================================
+   PORTAL INSTITUCIONAL — UFCAT (UNIVERSIDADE FEDERAL DE CATALÃO)
+   Mostra UFCAT 2026 — Bacharelado em Inteligência Artificial (BIA)
+   
+   Design Visual: Institucional, Limpo, Profissional e Acessível.
+   Sem efeitos de IA, sem neon, sem glassmorphism, sem sombras fortes.
+   ============================================================ */
+
+:root {
+    /* Cores Institucionais UFCAT */
+    --ufcat-teal: #007a78;
+    --ufcat-teal-dark: #005a58;
+    --ufcat-teal-light: #e6f4f4;
+    --ufcat-green: #3a9e7e;
+    --ufcat-orange: #d96414;
+    --ufcat-orange-dark: #b54d09;
+    --ufcat-orange-light: #fef4ec;
+
+    /* Superfícies Neutras */
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-subtle: #f1f5f9;
+    --bg-header-top: #005a58;
+    --bg-footer: #0f172a;
+
+    /* Tipografia e Texto */
+    --text-main: #1e293b;
+    --text-heading: #0f172a;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --text-inverse: #ffffff;
+
+    /* Bordas e Separações */
+    --border-color: #cbd5e1;
+    --border-light: #e2e8f0;
+    --border-teal: #99d5d3;
+    --border-orange: #fcd3b6;
+
+    /* Fontes */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Raios de Borda Institucionais (Discretos) */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    /* Sombras Discretas */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* Reset Padrão */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Topbar Institucional Superior */
+.gov-bar {
+    background-color: var(--bg-header-top);
+    color: var(--text-inverse);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 0;
+    border-bottom: 3px solid var(--ufcat-orange);
+}
+
+.gov-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gov-brand {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.gov-dept {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Container Principal */
+.container {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho Institucional */
+.header {
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-light);
+    padding: 32px 0 28px;
+    box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo-wrapper {
+    flex-shrink: 0;
+    background: #ffffff;
+    padding: 12px 16px;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+}
+
+.official-logo {
+    max-width: 210px;
+    height: auto;
+}
+
+.header-text {
+    flex: 1;
+}
+
+.institution-tagline {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ufcat-teal);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.hero-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--text-heading);
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.hero-title .line-teal {
+    color: var(--ufcat-teal);
+}
+
+.hero-title .line-orange {
+    color: var(--ufcat-orange);
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+/* Metadata Chips */
+.info-chips {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--bg-subtle);
+    color: var(--text-main);
+    border: 1px solid var(--border-light);
+}
+
+.chip-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.chip-dot.teal { background: var(--ufcat-teal); }
+.chip-dot.orange { background: var(--ufcat-orange); }
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    padding: 32px 0 48px;
+}
+
+/* Painel de Estatísticas */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.stat-item {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    border-left: 4px solid var(--ufcat-teal);
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-item.orange-border {
+    border-left-color: var(--ufcat-orange);
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    line-height: 1;
+}
+
+.stat-value.teal { color: var(--ufcat-teal); }
+.stat-value.orange { color: var(--ufcat-orange); }
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Divisor */
+.divider {
+    height: 1px;
+    background-color: var(--border-light);
+    margin: 28px 0;
+}
+
+/* Grid de 2 Colunas */
+.columns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.column-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho de Seção */
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+    border-bottom: 2px solid var(--ufcat-teal);
+}
+
+.section-label {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-heading);
+}
+
+/* Lista de Pôsteres Institucional */
+.poster-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.poster-card {
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 18px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.poster-card:hover {
+    background-color: var(--ufcat-teal-light);
+    border-color: var(--border-teal);
+}
+
+.card-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+.card-num.c-teal {
+    background: var(--ufcat-teal-light);
+    color: var(--ufcat-teal);
+    border: 1px solid var(--border-teal);
+}
+
+.card-num.c-orange {
+    background: var(--ufcat-orange-light);
+    color: var(--ufcat-orange);
+    border: 1px solid var(--border-orange);
+}
+
+.card-info {
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+
+.poster-card:hover .card-title {
+    color: var(--ufcat-teal-dark);
+}
+
+.card-desc {
+    font-size: 0.825rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: var(--radius-sm);
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag-ufcat {
+    background: var(--ufcat-teal-light);
+    color: var(--ufcat-teal-dark);
+    border: 1px solid var(--border-teal);
+}
+
+.tag-orange {
+    background: var(--ufcat-orange-light);
+    color: var(--ufcat-orange-dark);
+    border: 1px solid var(--border-orange);
+}
+
+/* Seta dos Cards */
+.card-arrow {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--ufcat-teal);
+}
+
+.card-arrow svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.15s ease;
+}
+
+.poster-card:hover .card-arrow svg {
+    transform: translateX(3px);
+}
+
+/* Botões */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+    background-color: var(--ufcat-orange);
+    color: #ffffff;
+    border-color: var(--ufcat-orange-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--ufcat-orange-dark);
+}
+
+.btn-back {
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+.btn-back:hover {
+    background-color: var(--bg-subtle);
+    border-color: var(--text-muted);
+}
+
+/* Rodapé Institucional */
+.footer {
+    background-color: var(--bg-footer);
+    color: #cbd5e1;
+    padding: 36px 0;
+    border-top: 4px solid var(--ufcat-teal);
+    margin-top: auto;
+    font-size: 0.875rem;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.footer p {
+    line-height: 1.6;
+}
+
+.footer strong {
+    color: #ffffff;
+}
+
+.footer a {
+    color: #38bdf8;
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #7dd3fc;
+}
+
+/* ===== Estilos das Páginas de Visualização (Viewer) ===== */
+.viewer-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+.viewer-topbar {
+    background-color: #0f172a;
+    border-bottom: 2px solid var(--ufcat-teal);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.poster-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    background: var(--ufcat-teal);
+    color: #ffffff;
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.topbar-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.topbar-subtitle {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.live-app-banner {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-left: 4px solid var(--ufcat-orange);
+    padding: 14px 20px;
+    margin: 16px auto 0;
+    max-width: 960px;
+    width: calc(100% - 32px);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.live-app-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.live-app-desc {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.poster-viewport {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    gap: 32px;
+}
+
+.poster-frame {
+    position: relative;
+    max-width: 100%;
+    max-height: calc(100vh - 180px);
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.poster-frame img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 180px);
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
+.poster-protection-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    background: transparent;
+    cursor: default;
+}
+
+/* ===== Seção Complementar: PDF & Galeria de Imagens ===== */
+.content-section-block {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 16px 24px;
+}
+
+.section-subheading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--ufcat-teal);
+}
+
+/* PDF Embedded Container & Grid */
+.pdf-embed-wrapper {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #334155;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #0f172a;
+    margin-bottom: 24px;
+}
+
+.pdf-embed-object {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdf-pages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.pdf-page-card {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: var(--radius-sm);
+    padding: 8px;
+    overflow: hidden;
+}
+
+.pdf-page-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    display: block;
+}
+
+.pdf-page-caption {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-align: center;
+    margin-top: 6px;
+}
+
+/* Galeria de Screenshots do Jogo (Terceira Lua) */
+.game-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.game-gallery-card {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.15s ease;
+}
+
+.game-gallery-card:hover {
+    border-color: var(--ufcat-teal);
+}
+
+.game-gallery-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.game-gallery-caption {
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    border-top: 1px solid #334155;
+    background: #1e293b;
+}
+
+.viewer-bottom {
+    background-color: #0f172a;
+    border-top: 1px solid #334155;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Responsividade Institucional */
+@media (max-width: 860px) {
+    .columns-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    .logo-wrapper {
+        margin: 0 auto;
+    }
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    .info-chips {
+        justify-content: center;
+    }
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+    .poster-card {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+    .card-arrow {
+        display: none;
+    }
+    .live-app-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .viewer-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .pdf-embed-wrapper {
+        height: 420px;
+    }
+}
