@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Determine page key from pathname (filename without .html).
   const pathname = window.location.pathname;
   const filename = pathname.substring(pathname.lastIndexOf('/') + 1);
-  const pageKey = filename.replace('.html', '');
+  const pageKey = filename.replace('.html', '') || 'index';
 
   const counterEl = document.getElementById(`counter-${pageKey}`);
   if (!counterEl) return; // No counter element on this page.
